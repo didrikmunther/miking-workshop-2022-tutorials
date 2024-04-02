@@ -43,33 +43,8 @@ include "map.mc"
 -/
 
 
--- `fact n` computes the factorial !n, where we assume n >= 0.
+-- -- `fact n` computes the factorial !n, where we assume n >= 0.
 let fact : Int -> Int = lam n : Int. never -- You should replace `never` with your implementation.
-
--- START LIVE CODING SOLUTION
--- We first ensure that our unit tests fails on an incorrect output.
-let fact : Int -> Int = lam n : Int. 0
-
--- We then handle the base case n=0
-let fact : Int -> Int = lam n : Int.
-  if eqi n 0 then 1
-  else 0
-
--- We can also assert n >= 0
-let fact : Int -> Int = lam n : Int.
-  if lti n 0 then error "Undefined"
-  else if eqi n 0 then 1
-  else 0
-
--- For all other n we call `fact` recursivly with the predecessor of n.
-recursive let fact : Int -> Int = lam n : Int.
-  if lti n 0 then error "Undefined"
-  else if eqi n 0 then 1
-  else muli n (fact (subi n 1))
-end    -- This `end` keyword marks the end of mutually recursive top-level lets.
-
--- All unit tests should now pass.
--- END LIVE CODING SOLUTION
 
 -- Some tests for `fact`, add to these if you like. Uncomment these to add these
 -- tests to the executable.

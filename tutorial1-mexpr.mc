@@ -43,7 +43,7 @@ include "map.mc"
 -/
 
 
--- -- `fact n` computes the factorial !n, where we assume n >= 0.
+-- `fact n` computes the factorial !n, where we assume n >= 0.
 let fact : Int -> Int = lam n : Int. never -- You should replace `never` with your implementation.
 
 -- Some tests for `fact`, add to these if you like. Uncomment these to add these
